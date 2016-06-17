@@ -1,0 +1,87 @@
+-<!--TRABAJO02 UCV NEY SOPLA CHECAN-->
+<!DOCTYPE html>
+<html lang="en" hg-app="">
+<head>
+    <meta charset="UTF-8">
+    <title>Trabajo_02</title>
+    <script type="text/javascript">
+
+        var nombre = prompt("Ingrese su nombre,", "Sin Nombre");
+        var apellido = prompt("Ingrese su apellido", "Sin Apellido");
+        alert(nombre);
+        document.write("Buen día joven, "+nombre+" "+apellido+ "<br/>");
+
+    </script>
+    <script>
+function validar(){
+	if (document.form.txtusuario.value == document.form.txtcontra.value)
+	    {
+			alert('¡La contraseña no puede ser igual al usuario!');
+			document.form.txtusuario.focus();
+		return;
+		}
+	else
+	{
+		/* Si todo está OK se prosigue con lo que sea: */
+		    alert('¡Todo está bien, continue!');
+		document.form.submit;
+	}
+}
+</script>
+<script>
+function reloj() {
+
+// Obtiene la fecha actual
+var fObj = new Date() ;
+
+// Obtiene la hora
+var horas = fObj.getHours() ;
+
+// Obtiene los minutos
+var minutos = fObj.getMinutes() ;
+
+// Obtiene los segundos
+var segundos = fObj.getSeconds() ;
+
+// Si es menor o igual a 9 le concatena un 0
+if (horas <= 9) horas = "0" + horas;
+
+// Si es menor o igual a 9 le concatena un 0
+if (minutos <= 9) minutos = "0" + minutos;
+
+// Si es menor o igual a 9 le concatena un 0
+if (segundos <= 9) segundos = "0" + segundos;
+
+// Asigna la hora actual a la caja de texto reloj
+document.forma.reloj.value = horas+":"+minutos+":"+segundos;
+
+}
+// Cada segundo invoca la funcion reloj()
+setInterval("reloj()",1000);
+</script>
+</head>
+<body>
+<form name="forma">
+<input type="text" name="reloj" size="10">
+</form>
+</body>
+
+<body  bgcolor="#158354">
+<form name="form" action="loquesea.php" method="post">
+<table align="center">
+<tr>
+<td valign="top" align="center">
+<h1>LOGIN </h1>
+     Usuario :
+      <input name="txtusuario" type="text" id="txtusuario" style="text-align:left" size="15" maxlength="50"  >
+      <br><br>
+     Contraseña :
+      <input name="txtcontra" type="password" id="txtcontra" style="text-align:left" size="15" maxlength="20"  >
+          <br><br>
+      <input type="button" name="btnenvio"value="Aceptar" onClick="validar()">
+</td>
+</tr>
+</table>
+</form>
+</body>
+</html>
