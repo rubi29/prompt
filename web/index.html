@@ -1,4 +1,4 @@
--<!--TRABAJO02 COMPUTO I UCV NEY SOPLA CHECAN-->
+-<!--TRABAJO02 COMPUTO I UCV RUBI DEL PILAR PIZANGO-->
 <!DOCTYPE html>
 <html lang="en" hg-app="">
 <head>
@@ -9,14 +9,14 @@
         var nombre = prompt("Ingrese su nombre,", "Sin Nombre");
         var apellido = prompt("Ingrese su apellido", "Sin Apellido");
         alert(nombre);
-        document.write("Buen día joven, "+nombre+" "+apellido+ "<br/>");
+        document.write("Buen día señorita, "+nombre+" "+apellido+ "<br/>");
 
     </script>
     <script>
 function validar(){
 	if (document.form.txtusuario.value == document.form.txtcontra.value)
 	    {
-			alert('¡La contraseña no puede ser igual al usuario!');
+			alert('¡La contraseña debe ser diferente a la usuario!');
 			document.form.txtusuario.focus();
 		return;
 		}
@@ -66,16 +66,16 @@ setInterval("reloj()",1000);
 </form>
 </body>
 
-<body  bgcolor="#158354">
+<body  bgcolor="#2d3ec3">
 <form name="form" action="loquesea.php" method="post">
 <table align="center">
 <tr>
 <td valign="top" align="center">
-<h1>LOGIN </h1>
-     Usuario :
+<h1>EXAMPLE LOGIN </h1>
+     User :
       <input name="txtusuario" type="text" id="txtusuario" style="text-align:left" size="15" maxlength="50"  >
       <br><br>
-     Contraseña :
+     Password:
       <input name="txtcontra" type="password" id="txtcontra" style="text-align:left" size="15" maxlength="20"  >
           <br><br>
       <input type="button" name="btnenvio"value="Aceptar" onClick="validar()">
